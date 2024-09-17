@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing.JS dentro de la página HTML</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="miLienzo" width="400" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <script>
+        var codigodePrograma = function(instanciaProcesing) { 
+            with (instanciaProcesing) {
+                size(400, 400);
+                frameRate(30);
+
+                // Cambiar el color de fondo
+                background(200, 220, 255); // Azul claro para el fondo
+
+                // Cambiar colores de las elipses
+                fill(255, 255, 255); // Blanco para el muñeco de nieve
+                stroke(0); // Borde negro para las elipses
+                strokeWeight(2); // Grosor del borde
+
+                // Dibujar las elipses (muñeco de nieve)
+                ellipse(200, 300, 150, 150); // Cuerpo inferior
+                ellipse(200, 210, 100, 100); // Cuerpo medio
+                ellipse(200, 140, 80, 80);   // Cabeza
+            }
+        };
+
+        var canvas = document.getElementById("miLienzo");
+        var instanc = new Processing(canvas, codigodePrograma);
+    </script>
+</body>
+</html>

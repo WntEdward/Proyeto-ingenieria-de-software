@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing.JS dentro de la página HTML</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="miLienzo"></canvas>
+</body>
+
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing.JS dentro de la página HTML</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="miLienzo"></canvas>
+</body>
+
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+<script>
+    var codigodePrograma = function(instanciaProcessing) { 
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+
+            background(144, 238, 144); // Verde claro para el cielo
+            // El suelo
+            fill(139, 69, 19); // Marrón para el suelo
+            rect(0, 300, 400, 100);  
+
+            // El sol
+            fill(255, 140, 0); // Naranja brillante para el sol
+            ellipse(80, 64, 100, 100);  
+
+            // El muñeco de nieve
+            fill(211, 211, 211); // Gris claro para el muñeco de nieve
+            ellipse(200, 300, 150, 150); // Cuerpo inferior
+            ellipse(200, 200, 100, 100); // Cuerpo medio
+            ellipse(200, 120, 75, 75);   // Cabeza
+        }
+    };
+
+    var canvas = document.getElementById("miLienzo");
+    var instanc = new Processing(canvas, codigodePrograma);
+</script>
+</html>

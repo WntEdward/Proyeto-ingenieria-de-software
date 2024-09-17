@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing.JS - Desayuno Completo</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="miLienzo" width="400" height="400"></canvas>
+</body>
+
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+<script>
+    var codigodePrograma = function(instanciaProcessing) { 
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+
+            // Fondo de mesa
+            background(186, 145, 20);
+
+            // Plato
+            fill(255, 255, 255);
+            ellipse(200, 200, 350, 350); // borde del plato
+            ellipse(200, 200, 300, 300); // interior del plato
+
+            // Huevo frito
+            fill(255, 255, 255); // clara
+            ellipse(150, 180, 80, 60);
+            fill(255, 221, 51); // yema
+            ellipse(150, 180, 30, 30);
+
+            // Tocino
+            fill(150, 75, 0);
+            rect(220, 150, 80, 20);
+            fill(255, 0, 0); // tiras del tocino
+            rect(230, 155, 60, 5);
+            rect(230, 162, 60, 5);
+
+            // Pan tostado
+            fill(210, 180, 140);
+            triangle(120, 250, 180, 250, 150, 210);
+
+            // Vaso de jugo
+            fill(255, 165, 0);
+            rect(280, 280, 50, 100); // vaso
+            fill(255, 223, 0);
+            ellipse(305, 280, 50, 10); // borde superior del jugo
+
+            // Tenedor
+            fill(192, 192, 192);
+            rect(50, 120, 10, 80); // mango del tenedor
+            rect(45, 120, 20, 10); // parte superior
+            for (var i = 0; i < 4; i++) {
+                rect(48 + i*5, 110, 3, 10); // dientes del tenedor
+            }
+        }
+    };
+
+    var canvas = document.getElementById("miLienzo");
+    var instanc = new Processing(canvas, codigodePrograma);
+</script>
+</html>
