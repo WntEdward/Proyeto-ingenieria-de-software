@@ -1,0 +1,121 @@
+/* Estilos para el encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #008DDA;
+  color: #F7EEDD;
+  padding: 10px 20px;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.left {
+  float: left;
+  display: flex; /* Para alinear la imagen y el texto */
+  align-items: center; /* Centrar verticalmente la imagen y el texto */
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 40px; /* Tamaño del logo */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilos para el contenido de la página */
+.content {
+  margin-top: 60px; /* Espacio para el encabezado fijo */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el contenedor de bienvenida */
+.welcome-container {
+  margin: 0; /* Elimina cualquier margen externo */
+  padding: 0; /* Elimina el padding interno */
+  width: 100%; /* Asegúrate de que ocupe el 100% del ancho */
+}
+
+/* Estilos para la etiqueta de bienvenida */
+.welcome-label {
+  background-color: #7ea4b1; /* Color de fondo */
+  color: white;
+  padding: 20px;
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  margin: 0; /* Sin margen */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el texto de bienvenida */
+.welcome-label h1 {
+  margin: 0; /* Sin margen superior ni inferior */
+  padding-bottom: 10px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos para la imagen de bienvenida */
+.welcome-image {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Estilos para el contenedor de cámara */
+.camera-container {
+  position: relative; /* Añadido para el posicionamiento del overlay */
+  display: inline-block; /* Para ajustar el tamaño del contenedor */
+}
+
+/* Estilos para el canvas */
+canvas {
+  display: block;
+  margin: 20px auto; /* Margen superior e inferior */
+  width: 640px;
+  height: 480px;
+}
+
+.btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #41C9E2; /* Color del botón */
+  color: #F7EEDD; /* Color del texto del botón */
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos para la cubierta */
+.overlay {
+  display: none; /* Ocultarlo por defecto */
+  position: absolute;
+  top: 20px; /* Alineado con el canvas */
+  left: 0;
+  width: 640px; /* Igual al ancho del canvas */
+  height: 480px; /* Igual a la altura del canvas */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100; /* Asegurarse de que esté encima de otros elementos */
+}
+
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #008DDA;
+  color: #F7EEDD;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 97%;
+  margin-top: 40px;
+}
