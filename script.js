@@ -79,3 +79,9 @@ function toggleMenu() {
     menu.style.display = "block"; /* Muestra el menú si está oculto */
   }
 }
+
+document.getElementById('voiceButton').addEventListener('click', function() {
+  let text = document.querySelector('.transcription-box p').textContent;
+  let speech = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(speech);
+});
