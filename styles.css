@@ -104,7 +104,8 @@ header {
 }
 
 .transcription-section {
-  flex: 1;
+  width: 640px;
+  height: 525px;
   background: radial-gradient(circle, #912824, #48b3fe);
   padding: 20px;
   border-radius: 20px;
@@ -114,9 +115,20 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Asegura que los elementos se alineen verticalmente en el centro */
   margin-bottom: 10px;
-  padding: 2px 0; /* Ajusta el padding superior e inferior */
+  padding: 2px 0;
+}
+
+button#favButton {
+  padding: 10px 15px; /* Ajusta el padding para que el botón no sea tan alto */
+  font-size: 16px; /* Asegura un tamaño de fuente uniforme */
+  line-height: 1; /* Ayuda a centrar el texto del botón verticalmente */
+}
+
+h2 {
+  margin: 0; /* Elimina los márgenes por defecto del título */
+  line-height: 1; /* Ajusta la altura de línea para mejorar el alineado */
 }
 
 
@@ -127,7 +139,24 @@ header {
   height: 400px;
   overflow-y: auto;
   border: 1px solid #ddd;
+  position: relative; /* Necesario para que el botón se posicione correctamente */
 }
+
+#voiceButton {
+  position: absolute;
+  bottom: 10px; /* Ajusta el espacio desde la parte inferior */
+  left: 10px;   /* Ajusta el espacio desde la parte izquierda */
+  background-color: transparent; /* Fondo transparente para resaltar solo el ícono */
+  border: none;
+  color: #333;  /* Cambia el color del ícono */
+  font-size: 24px; /* Tamaño del ícono */
+  cursor: pointer;
+}
+
+#voiceButton:hover {
+  color: #000; /* Color del ícono al pasar el mouse por encima */
+}
+
 
 #video, #outputCanvas {
   width: 100%;
