@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor LSM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Barra de navegación fija -->
+    <header>
+        <div class="nav-left">
+            <img src="LOGO CON FONDO.jfif" alt="Logo" class="logo">
+            <span>LSM para todos</span>
+        </div>
+        <div class="nav-right">
+            <a href="#inicio">Inicio</a>
+            <a href="#camara">Cámara</a>
+            <a href="#contactos">Contactos</a>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+            <!-- Menú desplegable -->
+            <div id="dropdownMenu" class="dropdown-content">
+              <a href="opcion1.html">⭐ Favoritos</a>
+              <a href="opcion2.html">Diccionario</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section id="inicio" class="welcome-section">
+        <h1>Bienvenido al Traductor de LSM</h1>
+        <img src="LOGO SIN FONDO.PNG" alt="Imagen de bienvenida">
+        <p>ROMPIENDO BARRERAS CON CADA SEÑA</p>
+    </section>
+
+    <!-- Sección de cámara y transcripción -->
+    <section id="camara" class="camera-transcription-section">
+        <!-- Lado izquierdo: Cámara -->
+        <div class="camera-section">
+            <h2>Cámara para detección de señas</h2>
+            <div class="camera-container">
+                <video id="video" autoplay></video>
+                <canvas id="outputCanvas"></canvas>
+                <div id="overlay" class="cover">Cámara deshabilitada</div>
+            </div>
+            <button id="toggleCamera">Habilitar cámara</button>
+        </div>
+
+        <!-- Lado derecho: Transcripción -->
+        <div class="transcription-section">
+            <div class="transcription-header">
+                <h2>Transcripción</h2>
+                <button id="favButton">⭐Favoritos</button>
+            </div>
+            <div class="transcription-box">
+                <p>Transcripción...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id = "contactos">
+        <h2>Contáctanos</h2>
+        <p>¡Estamos aquí para ayudarte! Si tienes preguntas sobre el uso de nuestra aplicación o sugerencias para mejorarla, no dudes en escribirnos.</p>
+        <p><strong>Correo electrónico:</strong> contacto@lsmparatodos.com</p>
+        <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+        <p>¡Tu opinión es muy importante para nosotros!</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Función para desplazamiento suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 60; // Espacio para el header fijo
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            });
+        });
+    </script>
+</body>
+</html>
