@@ -1,3 +1,4 @@
+// Asignar elementos a constantes para su uso
 const videoElement = document.getElementById('video');
 const canvasElement = document.getElementById('outputCanvas');
 const canvasCtx = canvasElement.getContext('2d');
@@ -48,7 +49,7 @@ function onResults(results) {
   }
   canvasCtx.restore();
 }
-
+// Función para el control de lineas/circulos de las manos en mediapipe
 function calculateDistance(landmarks) {
   const wrist = landmarks[0];
   const indexFingerTip = landmarks[8];
@@ -70,7 +71,7 @@ toggleCameraButton.addEventListener('click', () => {
   }
   isCameraOn = !isCameraOn;
 });
-
+// Función para el despliegue del menú
 function toggleMenu() {
   var menu = document.getElementById("dropdownMenu");
   if (menu.style.display === "block") {
@@ -79,6 +80,13 @@ function toggleMenu() {
     menu.style.display = "block"; /* Muestra el menú si está oculto */
   }
 }
+
+// Conexión con el API para la reproducción de voz
+document.getElementById('voiceButton').addEventListener('click', function() {
+  let text = document.querySelector('.transcription-box p').textContent;
+  let speech = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(speech);
+});
 
 document.getElementById('voiceButton').addEventListener('click', function() {
   let text = document.querySelector('.transcription-box p').textContent;
