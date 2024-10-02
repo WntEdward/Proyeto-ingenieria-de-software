@@ -4,14 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Estilo del cuerpo de la página*/
 body {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
 }
-
+/* Estilo de la cabecera */
 header {
   background-color: #333;
   color: white;
@@ -25,6 +25,7 @@ header {
   z-index: 1000;
 }
 
+/* Division de secciones de la cabecera */
 .nav-right a {
   color: white;
   margin-left: 20px;
@@ -74,7 +75,7 @@ header {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-
+/* Estilo de seccion de bienvenida*/
 .welcome-section {
   margin-top: 60px;
   text-align: center;
@@ -89,7 +90,7 @@ header {
   margin: 0.1px 1;
   object-fit: cover;
 }
-
+ /* Estilo de la seccion de cámara y traducción */
 .camera-transcription-section {
   background: linear-gradient(to bottom, #00f2fe, #4facfe);
   display: flex;
@@ -119,7 +120,7 @@ header {
   margin-bottom: 10px;
   padding: 2px 0;
 }
-
+/* Estilo del bóton */
 button#favButton {
   padding: 10px 15px; /* Ajusta el padding para que el botón no sea tan alto */
   font-size: 16px; /* Asegura un tamaño de fuente uniforme */
@@ -131,7 +132,7 @@ h2 {
   line-height: 1; /* Ajusta la altura de línea para mejorar el alineado */
 }
 
-
+/* Estilo de la caja de transcripción*/
 .transcription-box {
   background-color: white;
   padding: 15px;
@@ -141,7 +142,7 @@ h2 {
   border: 1px solid #ddd;
   position: relative; /* Necesario para que el botón se posicione correctamente */
 }
-
+/* Icono para botón de voz */
 #voiceButton {
   position: absolute;
   bottom: 10px; /* Ajusta el espacio desde la parte inferior */
@@ -157,7 +158,6 @@ h2 {
   color: #000; /* Color del ícono al pasar el mouse por encima */
 }
 
-
 #video, #outputCanvas {
   width: 100%;
   height: 100%;
@@ -165,6 +165,7 @@ h2 {
   transform: scaleX(-1);
 }
 
+/* Contenedor de cámara y la cubierta */
 .camera-container {
   position: relative;
   width: 640px;
@@ -195,7 +196,7 @@ h2 {
   font-size: 24px;
   z-index: 100;
 }
-
+/* Estilo del botón */
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -211,7 +212,7 @@ button {
 button:hover {
   background-color: #2a8cd9;
 }
-
+/* Estilo del pie de página */
 footer {
   background-color: #333;
   color: white;
