@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <!-- Barra de navegación fija -->
@@ -27,7 +26,6 @@
             <a href="#camara">Cámara</a>
             <a href="#contactos">Contactos</a>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <!-- Menú desplegable -->
             <div id="dropdownMenu" class="dropdown-content">
               <a href="opcion1.html">⭐ Favoritos</a>
               <a href="opcion2.html">📚 Diccionario</a>
@@ -44,18 +42,22 @@
 
     <!-- Sección de cámara y transcripción -->
     <section id="camara" class="camera-transcription-section">
-        <!-- Lado izquierdo: Cámara -->
         <div class="camera-section">
             <h2>Cámara para detección de señas</h2>
             <div class="camera-container">
                 <video id="video" autoplay></video>
                 <canvas id="outputCanvas"></canvas>
                 <div id="overlay" class="cover">Cámara deshabilitada</div>
+                <div class="camera-controls">
+                    <button id="hangUpButton">🛑 Colgar</button>
+                    <button id="muteButton">🔇 Mute</button>
+                    <button id="rotateButton">🔄 Rotar</button>
+                    <button id="disableCameraButton">🚫 Desactivar</button>
+                </div>
             </div>
             <button id="toggleCamera">Habilitar cámara</button>
         </div>
 
-        <!-- Lado derecho: Transcripción -->
         <div class="transcription-section">
             <div class="transcription-header">
                 <h2>Transcripción</h2>
@@ -63,14 +65,15 @@
             </div>
             <div class="transcription-box">
                 <p>Transcripción...</p>
-                    <button id="voiceButton">
-                        <i class="fa fa-volume-up"></i> <!-- Ícono de voz -->
-                    </button>
+                <button id="voiceButton">
+                    <i class="fa fa-volume-up"></i>
+                </button>
             </div>
         </div>
     </section>
+
     <!-- Pie de página -->
-    <footer id = "contactos">
+    <footer id="contactos">
         <h2>Contáctanos</h2>
         <p>¡Estamos aquí para ayudarte! Si tienes preguntas sobre el uso de nuestra aplicación o sugerencias para mejorarla, no dudes en escribirnos.</p>
         <p><strong>Correo electrónico:</strong> contacto@lsmparatodos.com</p>
@@ -98,5 +101,6 @@
     </script>
 </body>
 </html>
+
 
 
